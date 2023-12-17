@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.CrurdCharacter.Inventory"
+             Title="Inventory">
+    <ScrollView>
+        <StackLayout>
+
+            <Label Text="Equipped Items" FontSize="Large" TextColor="#3498DB" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+            <Grid BackgroundColor="LightGray" Margin="5,5,5,10" HeightRequest="80" WidthRequest="80">
+                <Image x:Name="EquippedWeaponImage"
+               Source="{Binding EquippedWeapon.ImagePath}"
+               Aspect="AspectFill"
+               HeightRequest="50"
+               WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="EquippedWeaponTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+            <Grid BackgroundColor="LightGray" Margin="5,5,5,10" HeightRequest="80" WidthRequest="80">
+                <Image x:Name="EquippedArmorImage"
+               Source="{Binding EquippedArmor.ImagePath}"
+               Aspect="AspectFill"
+               HeightRequest="50"
+               WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="EquippedArmorTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+            <Label Text="Unequipped Items" FontSize="Large" TextColor="#3498DB" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <ScrollView>
+
+                <CollectionView x:Name="UnequippedCollectionView"
+                        ItemsSource="{Binding UnequippedItems}"
+                        VerticalOptions="StartAndExpand">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                 Span="4" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="LightGray"
+                          Margin="5,5,5,10"
+                          HeightRequest="80"
+                          WidthRequest="80">
+
+                                <Image Source="{Binding ImagePath}"
+                               Aspect="AspectFill"
+                               HeightRequest="50"
+                               WidthRequest="50" >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="UnEquippedItemTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

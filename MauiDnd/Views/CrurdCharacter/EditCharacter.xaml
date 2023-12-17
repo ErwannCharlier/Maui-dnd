@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.CrurdCharacter.EditCharacter"
+             Title="EditCharacter">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" BackgroundColor="#ECF0F1">
+
+            <!-- Display Fields -->
+            <StackLayout Spacing="10">
+                <Label Text="Name" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Entry Text="{Binding Character.Name, Mode=TwoWay}" Placeholder="Enter name" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Race" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Entry Text="{Binding Character.Race, Mode=TwoWay}" Placeholder="Enter race" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Class" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Picker Title="Select a Class" SelectedIndexChanged="ClassPicker_SelectedIndexChanged" x:Name="ClassPicker"
+                                TextColor="#34495E">
+                            <!-- Add class options here -->
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Level" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Entry Text="{Binding Character.Lvl, Mode=TwoWay}"  IsEnabled="False" Placeholder="Enter level" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="HP" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Entry Text="{Binding Character.HP, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter HP" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Frame BackgroundColor="#3498DB" CornerRadius="5" Padding="5" WidthRequest="200" HorizontalOptions="Center">
+                <Button Text="Inventory" Clicked="Inventory_Clicked" TextColor="White" FontSize="Large"/>
+            </Frame>
+
+            <!-- Abilities Section -->
+            <Label Text="Abilities" FontAttributes="Bold" FontSize="Large" TextColor="#3498DB" Margin="0,20,0,10"/>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Strenght" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Strenght, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter strength" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Dexterity" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Dexterity, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter dexterity" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Constitution" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Constitution, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter constitution" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Intelligence" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Intelligence, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter intelligence" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Charisma" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Charisma, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter charisma" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5" WidthRequest="100" HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Wisdom" FontSize="10" TextColor="#3498DB" />
+                        <Entry Text="{Binding Character.Wisdom, Mode=TwoWay}" IsEnabled="False" Placeholder="Enter wisdom" TextColor="#34495E" Keyboard="Numeric" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Save Button -->
+            <Frame BackgroundColor="#3498DB" CornerRadius="5" Padding="5" WidthRequest="200" HorizontalOptions="Center">
+                <Button Text="Save Changes" Clicked="SaveChanges_Clicked" TextColor="White" FontSize="Large"/>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

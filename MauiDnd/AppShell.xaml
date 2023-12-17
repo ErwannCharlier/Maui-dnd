@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiDnd.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Views="clr-namespace:MauiDnd.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+
+        <ShellContent
+            Title="Menu"
+            ContentTemplate="{DataTemplate Views:Menu}"
+            Icon="{OnPlatform 'dnd.png', iOS='dnd.png', MacCatalyst='dnd.png'}" />
+
+
+        <ShellContent
+            Title="Wiki"
+            ContentTemplate="{DataTemplate Views:Wiki}"
+            Icon="{OnPlatform 'epee.png'}" />
+
+        <ShellContent
+            Title="Jeu"
+            ContentTemplate="{DataTemplate Views:GameList}"
+            Icon="{}" />
+
+        <ShellContent
+            Title="Personnage"
+            ContentTemplate="{DataTemplate Views:Personnage}"
+            Icon="{}" />
+
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.ShowWiki.ShowMonster"
+             Title="ShowMonster">
+
+    <ScrollView>
+            <StackLayout Padding="20" Spacing="15" BackgroundColor="#ECF0F1">
+
+                <StackLayout Spacing="10">
+                    <Label Text="Monster Name" FontSize="Medium" TextColor="#3498DB" />
+                    <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                        <StackLayout>
+                            <Label Text="{Binding Name, Mode=TwoWay}"  TextColor="#34495E" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Label Text="Description" FontSize="Medium" TextColor="#3498DB" />
+                    <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                        <StackLayout>
+                            <Label Text="{Binding Desc, Mode=TwoWay}" TextColor="#34495E" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Label Text="Size" FontSize="Medium" TextColor="#3498DB" />
+                    <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                        <StackLayout>
+                            <Label Text="{Binding Size, Mode=TwoWay}" TextColor="#34495E" />
+                        </StackLayout>
+                    </Frame>
+
+                <Label Text="Type" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Type, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Label Text="Alignment" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Alignment, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Armor_class" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Armor_class, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Label Text="Hit Points" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Hit_points, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Speed" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Speed, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Label Text="Strength" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Strength, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Dexterity" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Dexterity, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Constitution" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Constitution, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Intelligence" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Intelligence, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Wisdom" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Wisdom, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Charisma" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Charisma, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Languages" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Languages, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Label Text="Challenge_rating" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Challenge_rating, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Label Text="XP" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding XP, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+
+                <Label Text="Hp" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Hp, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+
+                
+            </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage>

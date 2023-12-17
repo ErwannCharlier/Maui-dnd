@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiDnd.Views"
+             x:Class="MauiDnd.Views.FightView"
+             Title="FightView"
+             x:Name="FightPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="0" Grid.ColumnSpan="3"  Color="WhiteSmoke"/>
+        <Image x:Name="MonsterImage" Grid.Row="0" Grid.ColumnSpan="3" Aspect="AspectFill"></Image>
+        <Grid Grid.Row="0" Grid.ColumnSpan="3" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <Label x:Name="MonsterNameLabel" Grid.Row="0" Grid.Column="3" TextColor="Grey" HorizontalTextAlignment="End"></Label>
+
+            <Label x:Name="MonsterPvLabel" Grid.Row="1" Grid.Column="3" TextColor="White" HorizontalTextAlignment="End"></Label>
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" MaximumHeightRequest="120">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <BoxView Grid.Row="0" Grid.ColumnSpan="2" Color="Grey" />
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Equipement" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <BoxView Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Color="Grey" />
+            <Label x:Name="PvLabel" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"  HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <ImageButton x:Name="SwordButton" Grid.Row="1" Grid.Column="0" Aspect="AspectFill"/>
+
+
+            <ImageButton x:Name="ArmorButton" Grid.Row="1" Grid.Column="1" Aspect="AspectFill" ></ImageButton>
+
+            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <ImageButton x:Name="PlayButton" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Aspect="AspectFill" Clicked="OnPlayButtonClicked" Source="buttonplay.jpg" />
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

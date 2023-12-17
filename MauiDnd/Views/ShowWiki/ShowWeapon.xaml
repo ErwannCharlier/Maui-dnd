@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.ShowWiki.ShowWeapon"
+             Title="ShowWeapon">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" BackgroundColor="#ECF0F1">
+
+            <StackLayout Spacing="10">
+                <Label Text="Nom" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Name, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Damage" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Damage, Mode=TwoWay}" TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Coût" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Cost, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Weight" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Weight, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+               
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+
+        

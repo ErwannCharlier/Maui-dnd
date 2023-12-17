@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.ShowWiki.ShowFeat"
+             Title="ShowFeat">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" BackgroundColor="#ECF0F1">
+
+            <StackLayout Spacing="10">
+                <Label Text="Feat Name" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Name, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Description" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Description, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Benefit" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Benefit, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Source" FontSize="Medium" TextColor="#3498DB" />
+                <Frame BackgroundColor="#BDC3C7" CornerRadius="5">
+                    <StackLayout>
+                        <Label Text="{Binding Source, Mode=TwoWay}"  TextColor="#34495E" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

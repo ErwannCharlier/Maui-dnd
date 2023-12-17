@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.CrurdCharacter.AddCharacter"
+             Title="AddCharacter">
+    <StackLayout Margin="20,205,20,25">
+        <Button Margin="15" Text="Personnage aléatoire" Clicked="GenerateRandomCharacter"></Button>
+        <Button Margin="15" Text="Crée personnage" Clicked="CreateCharacter"></Button>
+    </StackLayout>
+</ContentPage>

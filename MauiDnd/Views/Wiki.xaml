@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.Wiki"
+             Title="Wiki">
+    <Grid x:Name="LayoutRoot" Background="#009FB8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <Label Grid.Column="0" Grid.Row="3" Text="Armure" Margin="10"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Armor" Margin="10" Grid.Column="0" Grid.Row="2" Source="{OnPlatform 'armure.png', iOS='armure.png', MacCatalyst='armure.png'}" CommandParameter="0"
+             Aspect="AspectFit" WidthRequest="150" HeightRequest="150"
+             HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+             BackgroundColor="Transparent" Clicked="RechercheClicked"/>
+
+
+
+
+        <Label Grid.Column="1" Grid.Row="3" Text="Arme" Margin="10"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Arme" Margin="10" Grid.Column="1" Grid.Row="2" Source="{OnPlatform 'epee.png', iOS='epee.png', MacCatalyst='epee.png'} "
+                      CommandParameter="1"
+                     Aspect="AspectFit" WidthRequest="150" HeightRequest="150"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Transparent" Clicked="RechercheClicked" />
+
+
+
+
+
+        <Label Grid.Column="0" Grid.Row="5" Text="Classe" Margin="10"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Classe" Margin="10" Grid.Column="0" Grid.Row="4" Source="{OnPlatform 'Chapeau_de_sorcier.png', iOS='Chapeau_de_sorcier.png', MacCatalyst='Chapeau_de_sorcier.png'}"
+                     Aspect="AspectFit" WidthRequest="150" HeightRequest="150"  CommandParameter="2"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Transparent" Clicked="RechercheClicked" />
+
+
+
+        <Label Grid.Column="1" Grid.Row="5" Text="Spell" Margin="10"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Spell" Margin="10"  Grid.Column="1" Grid.Row="4" Source="{OnPlatform 'parchemin.png', iOS='parchemin.png', MacCatalyst='parchemin.png'}"
+                     Aspect="AspectFit" WidthRequest="150" HeightRequest="150"  CommandParameter="3"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Transparent" Clicked="RechercheClicked" />
+
+
+
+
+        <Label Grid.Column="0" Grid.Row="7" Text="Feat" Margin="10"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Feat" Margin="10" Grid.Column="0" Grid.Row="6" Source="{OnPlatform 'sorcier.png', iOS='sorcier.png', MacCatalyst='sorcier.png'}"
+                     Aspect="AspectFit" WidthRequest="150" HeightRequest="150"  CommandParameter="4"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Transparent" Clicked="RechercheClicked" />
+
+
+
+
+        <Label Grid.Column="1" Margin="10" Grid.Row="7" Text="Monstre" 
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                FontAttributes="Bold" FontSize="24" TextColor="Black"
+                Background="#009FB8" />
+
+        <ImageButton x:Name="Monstre" Margin="10" Grid.Column="1" Grid.Row="6" Source="{OnPlatform 'orc.png', iOS='orc.png', MacCatalyst='orc.png'}"
+                     Aspect="AspectFit" WidthRequest="150" HeightRequest="150"  CommandParameter="5"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Transparent" Clicked="RechercheClicked" />
+
+
+    </Grid>
+</ContentPage>

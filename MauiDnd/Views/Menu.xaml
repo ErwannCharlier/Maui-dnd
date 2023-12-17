@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.Menu"
+             BackgroundColor="#92140C">
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        
+        <Image Source="{OnPlatform 'dnd.png', iOS='dnd.png', MacCatalyst='dnd.png'}"
+               Aspect="AspectFit" WidthRequest="181" HeightRequest="163"
+               HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+               Grid.Row="1" />
+
+        <StackLayout BackgroundColor="#92140C" Grid.Row="2">
+            <Label  Text="DnD Conquest" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End"/>
+        </StackLayout>
+
+        <StackLayout HeightRequest="100" BackgroundColor="#92140C" VerticalOptions="EndAndExpand" Margin="0,30,0,0" Grid.Row="3">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Button Text="Se connecter" Clicked="SeConnecter_Clicked" BackgroundColor="#009FB8" TextColor="Black" WidthRequest="200" FontSize="20" HeightRequest="50"/>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout HeightRequest="100" BackgroundColor="#92140C" VerticalOptions="EndAndExpand" Margin="0,30,0,0" Grid.Row="4">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Button Text="Créer un compte" Clicked="CreerCompte_Clicked" BackgroundColor="#009FB8" TextColor="Black" WidthRequest="200" FontSize="20" HeightRequest="50"/>
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

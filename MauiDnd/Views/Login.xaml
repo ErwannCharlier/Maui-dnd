@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.Login"
+             BackgroundColor="#92140C"
+             Title="Login">
+
+    <Grid x:Name="LayoutRoot" Background="#92140C" Width="400" Height="300">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Text="Login" Margin="10" 
+       HorizontalOptions="Center" VerticalOptions="End" 
+       FontAttributes="Bold" FontSize="24" TextColor="Black" />
+
+        <Grid Grid.Row="2" Margin="0" HorizontalOptions="FillAndExpand" HeightRequest="48" WidthRequest="182">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" BorderColor="Black" CornerRadius="5" BackgroundColor="Red">
+                <Entry />
+            </Frame>
+        </Grid>
+
+
+
+        <Label Grid.Row="3" Text="Password" Margin="10" 
+            HorizontalOptions="Center" VerticalOptions="End" 
+           FontAttributes="Bold" FontSize="24" TextColor="Black" />
+
+        <Frame Grid.Row="4" Margin="0" HorizontalOptions="FillAndExpand" 
+       BorderColor="Black" CornerRadius="5" BackgroundColor="Red" 
+       WidthRequest="182" HeightRequest="48">
+            <Entry />
+        </Frame>
+        
+       
+        <Button Grid.Row="5" Text="Validation" Margin="0"
+        HorizontalOptions="Center" VerticalOptions="End" 
+        FontAttributes="Bold" FontSize="24" TextColor="Black"
+        BorderColor="Black" CornerRadius="5" BackgroundColor="Red"/>
+
+    </Grid>
+</ContentPage>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDnd.Views.CreatLogin"
+             Title="CreatLogin">
+
+    <Grid x:Name="LayoutRoot" Background="#92140C">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Text="Login" Margin="10" 
+       HorizontalOptions="Center" VerticalOptions="End" 
+       FontAttributes="Bold" FontSize="24" TextColor="White" />
+
+        <Frame Grid.Row="2" Margin="0" HorizontalOptions="FillAndExpand" HeightRequest="48" WidthRequest="182"
+            BorderColor="White" CornerRadius="5" BackgroundColor="Red">
+           <Entry />
+        </Frame>
+
+
+
+        <Label Grid.Row="3" Text="Password" Margin="10" 
+            HorizontalOptions="Center" VerticalOptions="End" 
+           FontAttributes="Bold" FontSize="24" TextColor="White" />
+
+        <Frame Grid.Row="4" Margin="0" HorizontalOptions="FillAndExpand" 
+       BorderColor="White" CornerRadius="5" BackgroundColor="Red" 
+       WidthRequest="182" HeightRequest="48">
+            <Entry />
+        </Frame>
+
+
+        <Label Grid.Row="5" Text="Confirm password" Margin="10" 
+            HorizontalOptions="Center" VerticalOptions="End" 
+           FontAttributes="Bold" FontSize="24" TextColor="White"/>
+
+        <Frame Grid.Row="6" Margin="0" HorizontalOptions="FillAndExpand" HeightRequest="48" WidthRequest="182"
+            BorderColor="White" CornerRadius="5" BackgroundColor="Red">
+            <Entry />
+        </Frame>
+
+        <Button Grid.Row="7" Text="Register" Margin="0"
+        HorizontalOptions="Center" VerticalOptions="End" 
+        FontAttributes="Bold" FontSize="24" TextColor="White"
+        BorderColor="White" CornerRadius="5" BackgroundColor="Red"
+        Clicked="ValidationClicked" />
+
+    </Grid>
+</ContentPage>
